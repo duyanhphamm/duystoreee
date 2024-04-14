@@ -1,0 +1,95 @@
+.product-detail-item {
+    background-color: var(--white-color);
+    border-radius: 8px;
+    display: flex;
+    padding: 20px;
+    margin-bottom: 36px;
+}
+
+.product-detail__img {
+    height: 300px;
+    width: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top center;
+    margin-right: 28px;
+}
+
+.product-detail-wrap {
+    width: 843px;
+    height: 309px;
+}
+
+.product-detail__title {
+    font-size: 2.0rem;
+    font-weight: 600;
+    line-height: 2.6rem;
+    height: 9.2rem;
+    overflow: hidden;
+    margin: 0;
+}
+
+.product-detail-sold {
+    display: flex;
+    margin-bottom: 40px;
+    justify-content: space-between;
+}
+
+.product-detail-sold-heart {
+    font-size: 1.4rem;
+}
+
+.product-detail-like-share {
+    margin-left: 8px;
+}
+
+.product-detail-like-empty {
+    color: #f44336;
+}
+
+.product-detail-assess {
+}
+
+.product-detail-assess-gold {
+    font-size: 1.4rem;
+    color: #FFD100;
+}
+
+.product-detail-price {
+    display: flex;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.product-detail__origin {
+    font-size: 4rem;
+}
+
+.product-detail__sale {
+    font-size: 2rem;
+    margin-left: 40px;
+}
+
+.product-detail-buy {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-detail-buy-cart {
+    text-decoration: none;
+    font-size: 2.0rem;
+    background-color: #E8FDF6;
+    padding: 14px 20px;
+    color: var(--primary-color);
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.fa-truck-fast {
+    margin-right: 8px;
+}
+
+.product-detail-country {
+    font-size: 2.0rem;
+}

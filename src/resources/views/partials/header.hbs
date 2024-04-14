@@ -1,0 +1,158 @@
+<header id="header">
+            <div class="grid">
+                <div class="nav">
+                    <div class="nav__block">
+                        <ul class="nav__block-list">
+                            <li class="nav__block-item active">
+                                <a href="/home" class="nav__list-link">
+                                    <i class="fa-solid fa-house nav__list--icon"></i>
+                                    Trang chủ
+                                </a>
+                            </li>
+                            <li class="nav__block-item">
+                                <a href="#" class="nav__list-link">
+                                    <i class="fa-solid fa-circle-info nav__list--icon"></i>
+                                    Trợ giúp
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="nav__block">
+                        <ul class="nav__block-list">
+                            <li class="nav__block-item nav__block-item--notification">
+                                <a href="#" class="nav__list-link">
+                                    <i class="fa-solid fa-bell nav__list--icon"></i>
+                                    Thông báo
+                                </a>
+
+                                <!-- Block Notification -->
+                                <div class="notification">
+                                <h3 class="notification__header">Thông báo mới nhận</h3>
+
+                                <ul class="notification__list">
+                                    <li class="notification__item">
+                                        <img src="/img/notification/store.jpg" alt="" class="notification__img">
+                                        <div class="notification__item--info">
+                                            <h3 class="notification__title">Nói đi bạn ơi, DuyStore nghe hết</h3>
+                                            <p class="notification__desc">Trải nghiệm mua sắm trực tuyến của bạn như thế nào? Hãy "xả" cho DuyStore nghe 💁 TẠI ĐÂY nhé!</p>
+                                        </div>
+                                    </li>
+
+                                    <li class="notification__item">
+                                        <img src="/img/notification/uudai.jpg" alt="" class="notification__img">
+                                        <div class="notification__item--info">
+                                            <h3 class="notification__title">Thêm nhiều ưu đãi mua sắm cuối năm cùng Bank và DuyStore</h3>
+                                            <p class="notification__desc">Thẻ tín dụng Bank-DuyStore là một trong những dòng thẻ tín dụng hướng đến người dùng online, đặc biệt là người tiêu dùng thường xuyên mua sắm trên DuyStore</p>
+                                        </div>
+                                    </li>
+
+                                    <li class="notification__item">
+                                        <img src="/img/notification/sale50.jpg" alt="" class="notification__img">
+                                        <div class="notification__item--info">
+                                            <h3 class="notification__title">Giảm đến 50% - Diện đẹp đi chơi</h3>
+                                            <p class="notification__desc">Voucher Payweek giảm 12% 👗 Thời trang và Mỹ phẩm giảm 50% 🎁 Săn sale thời trang ngay hôm nay!</p>
+                                        </div>
+                                    </li>
+
+                                    <li class="notification__item">
+                                        <img src="/img/notification/voucher.jpeg" alt="" class="notification__img">
+                                        <div class="notification__item--info">
+                                            <h3 class="notification__title">🎁Bạn có voucher sắp hết hạn nè</h3>
+                                            <p class="notification__desc">👉Combo freeship + giảm giá tới 60k vẫn còn😍 Mã có sẵn trong ví! ⏰ Không xài, hết hạn, đừng tiếc đó!</p>
+                                        </div>
+                                    </li>
+
+                                    <li class="notification__item">
+                                        <img src="/img/notification/giamgia.png" alt="" class="notification__img">
+                                        <div class="notification__item--info">
+                                            <h3 class="notification__title">Giảm đến 200k cho đơn từ 1,2 triệu</h3>
+                                            <p class="notification__desc">DuyStore ưu đãi đến 200k cho chủ thẻ Banking 🎁 đối với đơn hàng từ 1,2 triệu</p>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                                <footer class="notification__footer" >
+                                    <a href="" class="notification__footer--btn">Xem tất cả</a>
+                                </footer>
+                            </div>
+                            <li class="nav__block-item">
+                                <a href="/" class="nav__list-link">
+                                    <i class="fa-solid fa-share nav__list--icon"></i>
+                                    Đăng xuất
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="header-main">
+                    <!-- logo -->
+                    <a href="/home" class="logo__link">
+                        <div class="logo">
+                            <img src="/img/logo/logo.png" alt="" class="logo__store">
+                        </div>
+                    </a>
+
+                    <!-- search -->
+                    <div class="header__search">
+                        <div class="header__search-input-wrap">
+                            <input type="text" id="searchInput" class="header__search-input" placeholder="Nhập để tìm kiếm sản phẩm">
+                            <button class="header__search-btn" onclick="performSearch()">
+                                <i class="header__search-btn-icon fa-solid fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- cart -->
+                    <div class="header__cart">
+                        <div class="header__cart-wrap">
+                            <i class="header__cart-icon fa-solid fa-cart-shopping"></i>
+                            <span class="header__cart-notice">{{totalCartItems}}</span>
+                        </div>
+                        <!-- Hiển thị số lượng từng đơn trong giỏ hàng -->
+                        <div class="header__cart-details">
+                            <ul>
+                                <h3 class="notification__header">Giỏ hàng của tôi</h3>
+                                {{#each cart}}
+                                    <li class="product-cart__wrap">
+                                        <div class="product-cart__name">
+                                            {{this.productName}}
+                                        </div>
+                                        <div class="product-cart__qty">
+                                            x {{this.quantity}}
+                                        </div>
+                                        <div class="product-cart__price">
+                                            <span class="product-cart__deal">Mua kèm deal sốc</span>
+                                             Giá: {{this.price}} VNĐ
+                                        </div>
+                                    </li>
+                                {{/each}}
+                                <span class="header__cart-total">
+                                    <i class="fa-solid fa-money-bill" style="color: #6ABFA5;"></i>
+                                    Tổng giá: <span style="color: #6ABFA5; font-size: 16px">{{totalCartValue}} VNĐ</span>
+                                </span>
+                                 <button class="header__cart-order-btn" onclick="placeOrder()">Đặt Hàng</button>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</header>
+<script>
+    function calculateTotalCartItems(cart) {
+        if (!cart) return 0;
+        return cart.reduce((total, item) => total + item.quantity, 0);
+    }
+</script>
+
+<script>
+    function performSearch() {
+        // Lấy giá trị từ ô nhập
+        const searchTerm = document.getElementById('searchInput').value;
+
+        // Chuyển hướng đến trang tìm kiếm với từ khóa
+        window.location.href = `home/search?query=${searchTerm}`;
+    }
+</script>
+

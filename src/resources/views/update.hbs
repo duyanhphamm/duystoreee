@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DuyStore - admin</title>
+    <link rel="icon" type="image/x-icon" href="/img/logo/logostoreblue.png">
+
+    <!-- link css -->
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/admin.css">
+
+    <!-- link icon -->
+    <link rel="stylesheet" href="/font/themify-icons-font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="/font/fontawesome-free-6.4.2/fontawesome-free-6.4.2/css/all.css">
+</head>
+<body>
+    <div class="admin">
+        <div class="admin-header">
+            <div class="grid">
+                <div class="admin-nav">
+                    <img src="/img/logo/logo.png" alt="" class="admin-nav__img">
+
+                    <ul class="admin-nav__list">
+                        <li class="admin-nav__item">
+                            <a href="/admin" class="admin-nav__link">
+                                Quản lí sản phẩm
+                                <i class="admin-nav__icon fa-solid fa-caret-down"></i>
+                            </a>
+                        </li>
+                        
+                        <li class="admin-nav__item">
+                            <a href="" class="admin-nav__link">
+                                Quản lí hóa đơn
+                                <i class="admin-nav__icon fa-solid fa-caret-down"></i>
+                            </a>
+                        </li>
+                        
+                        <li class="admin-nav__item">
+                            <a href="" class="admin-nav__link">
+                                Quản lí Tài khoản
+                                <i class="admin-nav__icon fa-solid fa-caret-down"></i>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="admin-nav__logout">
+                        <a href="/" class="admin-nav__logout-link">
+                            <i class="admin-nav__logout-icon fa-solid fa-right-to-bracket"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="admin-container">
+            <div class="grid">
+                <div class="grid__row">
+                    <div class="grid__column-3">
+                        <div class="admin-container-info">
+                            <div class="admin-container-blog">
+                                <div class="admin-container-wallp" style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url(/img/info/wallp3.jpg);">
+                                    <img src="/img/info/avt.png" alt="" class="admin-container-avt">
+                                    <div class="admin-container-forme">
+                                        <span class="admin-container-name">Phạm Anh Duy</span>
+                                        <span class="admin-container-date">Ngày sinh: 27th November 2003</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="admin-container-contact">
+                                <ul class="admin-container-contact-list">
+                                    <h3 class="admin-container-contact-heading">Quản lí tài khoản</h3>
+                                    <li class="admin-container-contact-bio">
+                                        <a href="" class="admin-container-contact-link">
+                                            <i class="admin-container-contact-icon fa-solid fa-user"></i>
+                                            Tài khoản cá nhân
+                                        </a>
+                                    </li>
+                                    
+                                    <li class="admin-container-contact-bio">
+                                        <a href="" class="admin-container-contact-link">
+                                            <i class="admin-container-contact-icon fa-solid fa-location-dot"></i>
+                                            Địa chỉ
+                                        </a>
+                                    </li>
+                                    
+                                    <li class="admin-container-contact-bio">
+                                        <a href="" class="admin-container-contact-link">
+                                            <i class="admin-container-contact-icon fa-solid fa-envelope"></i>
+                                            Thông báo & bảo mật
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="admin-container-contact">
+                                <ul class="admin-container-contact-list">
+                                    <h3 class="admin-container-contact-heading">Quản lí tài khoản</h3>
+                                    <li class="admin-container-contact-bio">
+                                        <a href="" class="admin-container-contact-link">
+                                            <i class="admin-container-contact-icon fa-solid fa-hand"></i>
+                                            Đặt hàng
+                                        </a>
+                                    </li>
+                                    
+                                    <li class="admin-container-contact-bio">
+                                        <a href="" class="admin-container-contact-link">
+                                            <i class="admin-container-contact-icon fa-solid fa-heart"></i>
+                                            Yêu thích
+                                        </a>
+                                    </li>
+                                    
+                                    <li class="admin-container-contact-bio">
+                                        <a href="" class="admin-container-contact-link">
+                                            <i class="admin-container-contact-icon fa-solid fa-gift"></i>
+                                            Quà tặng
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid__column-9">
+                        <div class="form">
+                            <form action="/admin/{{listCarts._id}}?_method=PUT" method="post" class="form-main">
+                                <!-- form img -->
+                                <div class="form-main__wrap">
+                                    <div class="form-img">
+                                        <label for="form-img__input" class="form-img__label">Ảnh sản phẩm:</label>
+                                        <input type="text" class="form-img__input" value="{{listCarts.img}}" name="img">
+                                    </div>
+                                    <div class="form-img">
+                                        <label for="form-img__input" class="form-img__label">Ảnh chi tiết 1:</label>
+                                        <input type="text" class="form-img__input" placeholder="(nếu có)" value="{{listCarts.mimgf}}" name="mimgf">
+                                    </div>
+                                </div>
+
+                                <div class="form-main__wrap">
+                                    <div class="form-img">
+                                        <label for="form-img__input" class="form-img__label">Ảnh chi tiết 2:</label>
+                                        <input type="text" class="form-img__input" placeholder="(nếu có)" value="{{listCarts.mimgs}}" name="mimgs">
+                                    </div>
+                                    <div class="form-img">
+                                        <label for="form-img__input" class="form-img__label">Ảnh chi tiết 3:</label>
+                                        <input type="text" class="form-img__input" placeholder="(nếu có)" value="{{listCarts.mimgt}}" name="mimgt">
+                                    </div>
+                                </div>
+
+                                <div class="form-main__wrap">
+                                    <!-- form tên -->
+                                    <div class="form-name">
+                                        <label for="" class="form-name__label">Tên sản phẩm:</label>
+                                        <textarea class="form-name__input" name="name" >{{listCarts.name}}</textarea>
+                                    </div>
+
+                                    <!-- form giảm giá -->
+                                    <div class="form-price">
+                                        <label for="" class="form-price__label">Giá sản phẩm:</label>
+                                        <input type="text" class="form-price__input" placeholder="Nhập số" value="{{listCarts.price}}" name="origin" >
+                                    </div>
+                                </div>
+
+                                <div class="form-main__wrap">
+                                    <!-- form giảm giá -->
+                                    <div class="form-discount">
+                                        <label for="" class="form-discount-label">Giảm giá (%):</label>
+                                        <select class="form-discount__select" value="{{listCarts.sale}}" name="sale">
+                                        <option value="Error">--- Chọn mã giảm giá ---</option>
+                                        <option value="10">10%</option>
+                                        <option value="20">20%</option>
+                                        <option value="30">30%</option>
+                                        <option value="40">40%</option>
+                                        <option value="50">50%</option>
+                                        <option value="60">60%</option>
+                                        <option value="70">70%</option>
+                                        <option value="80">80%</option>
+                                        <option value="90">90%</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- form xuất xứ -->
+                                    <div class="form-country">
+                                        <label for="" class="form-country__label">Xuất xứ từ:</label>
+                                        <select class="form-country__select" value="{{listCarts.country}}" name="country">
+                                            <option value="Error">--- Chọn mã Quốc gia ---</option>
+                                            <option value="Vietnam">Việt Nam</option>
+                                            <option value="China">China</option>
+                                            <option value="USA">United States</option>
+                                            <option value="India">India</option>
+                                            <option value="Indonesia">Indonesia</option>
+                                            <option value="Pakistan">Pakistan</option>
+                                            <option value="Brazil">Brazil</option>
+                                            <option value="Nigeria">Nigeria</option>
+                                            <option value="Bangladesh">Bangladesh</option>
+                                            <option value="Russia">Russia</option>
+                                            <option value="Mexico">Mexico</option>
+                                            <option value="Japan">Japan</option>
+                                            <option value="Germany">Germany</option>
+                                            <option value="United Kingdom">United Kingdom</option>
+                                            <option value="France">France</option>
+                                            <option value="Italy">Italy</option>
+                                            <option value="Canada">Canada</option>
+                                            <option value="South Korea">South Korea</option>
+                                            <option value="Australia">Australia</option>
+                                            <option value="Spain">Spain</option>
+                                            <option value="Brazil">Brazil</option>
+                                            <option value="Turkey">Turkey</option>
+                                            <option value="Netherlands">Netherlands</option>
+                                            <option value="Switzerland">Switzerland</option>
+                                        <!-- Thêm các quốc gia khác tương tự -->
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- nút submit -->
+                                <div class="form-submit">
+                                    <button class="submit">Lưu lại</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    {{#if successMessage}}
+        <script>
+            alert("{{successMessage}}");
+        </script>
+    {{/if}}
+</body>
+</html>

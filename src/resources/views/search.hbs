@@ -1,0 +1,21 @@
+{{!-- {{> header}} --}}
+
+<div class="search-results">
+        <h2>Kết quả tìm kiếm cho "máy"</h2>
+        {{#each products}}
+            <!-- Hiển thị thông tin sản phẩm tìm được -->
+            <div class="search-result-item">
+                <a href="/cart/{{this._id}}" class="search-result-item__link">
+                    <div class="search-result-item__img" style="background-image: url({{this.img}});"></div>
+                </a>
+                <a href="/cart/{{this._id}}" class="search-result-item__link">
+                    <h3 class="search-result-item__title">{{this.name}}</h3>
+                </a>
+                <div class="search-result-item-price">
+                    <div class="search-result-item__origin">{{this.price}}đ</div>
+                    <div class="search-result-item__sale">-{{this.sale}}%</div>
+                </div>
+                <div class="search-result-item-country">{{this.country}}</div>
+            </div>
+        {{/each}}
+    </div>
